@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+     <context:component-scan base-package="com.work"/>
+   <!-- <bean id="user" class="com.work.dto.User"></bean>-->
+    <!--基于构造器-->
+   <!-- <bean id="peoplec" class="com.work.dto.People">
+        <constructor-arg index="0" value="456"></constructor-arg>
+        <constructor-arg index="1" value="构造器"></constructor-arg>
+    </bean>-->
+<!--基于setter注入-->
+  <!-- <bean id="people" class="com.work.dto.People">
+       <property name="id" value="123"></property>
+       <property name="name" value="setter"></property>
+   </bean>
+    <bean id="userServiceImpl" class="com.work.service.impl.UserServiceImpl">
+        <property name="people" ref="people"></property>
+    </bean>-->
+   <!-- &lt;!&ndash;实例工厂&ndash;&gt;
+    <bean id="getUsers" factory-bean="userServiceImpl" factory-method="getUsers"></bean>
+    &lt;!&ndash;静态工厂&ndash;&gt;
+    <bean name="getUser" class="com.work.service.impl.UserServiceImpl" factory-method="getUser"></bean>
+-->
+<!--配置里面启用EnableAspectJAutoProxy 注解 和 下面  一样-->
+   <!-- <aop:aspectj-autoproxy/>-->
+</beans>
